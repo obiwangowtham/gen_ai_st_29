@@ -29,3 +29,5 @@ if user_input:
     st.chat_message("assistant").write(response.choices[0].message.content)
     st.session_state["messages"].append({"role":"user","content":user_input})
     st.session_state["messages"].append({"role":"assistant","content":response.choices[0].message.content})
+if st.button("Clear chat"):
+    st.session_state["messages"]=[]
